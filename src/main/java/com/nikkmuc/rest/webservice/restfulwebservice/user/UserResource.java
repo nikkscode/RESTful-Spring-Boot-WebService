@@ -3,6 +3,8 @@ package com.nikkmuc.rest.webservice.restfulwebservice.user;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.hateoas.EntityModel;
+import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -10,6 +12,9 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import javax.validation.Valid;
 import java.net.URI;
 import java.util.List;
+
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
 @RestController
 @Tag(name = "User")
@@ -27,11 +32,17 @@ public class UserResource {
 
     @GetMapping(path = "/{id}")
     @Operation(summary = "Get User by ID", description = "Returns a User for a given ID.")
-    public User retrieveUser(@PathVariable int id){
+    public EntityModel<User> retrieveUser(@PathVariable int id){
         User user = service.findOne(id);
         if(user==null)
             throw new UserNotFoundException("id-" + id);
-        return user;
+        EntityModel<User> model = EntityModel.of(user);
+
+        WebMvcLinkBuilder linkToUsers =
+                linkTo(methodOn(this.getClass()).retrieveAllUsers());
+
+        model.add(linkToUsers.withRel("all-users"));
+        return model;
     }
 
     @DeleteMapping(path = "/{id}")
