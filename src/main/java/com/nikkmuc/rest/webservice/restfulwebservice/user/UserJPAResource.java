@@ -1,5 +1,6 @@
 package com.nikkmuc.rest.webservice.restfulwebservice.user;
 
+import com.nikkmuc.rest.webservice.restfulwebservice.exception.UserNotFoundException;
 import com.nikkmuc.rest.webservice.restfulwebservice.user.entities.Post;
 import com.nikkmuc.rest.webservice.restfulwebservice.user.entities.User;
 import com.nikkmuc.rest.webservice.restfulwebservice.user.repositories.PostRepository;
