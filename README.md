@@ -7,8 +7,8 @@ This application is created for demo purposes, but should also serve in the futu
 This RESTful Webservice consists auf two entities: Users and their Posts
 - A User can apply basic functions like creating and deleting Posts.
 - A Post has a short description and holds information about its creator.
-###1. User
-####1.1 User Bean
+### 1. User
+#### 1.1 User Bean
 
 | User                   |
 |------------------------|
@@ -16,7 +16,7 @@ This RESTful Webservice consists auf two entities: Users and their Posts
 | private String: name   |
 | private Date: birthday |
 
-####1.2 User-Controller
+#### 1.2 User-Controller
 
 | Function           | Request Method | URI         | Example  |
 |--------------------|----------------|-------------|----------|
