@@ -4,7 +4,7 @@
 This application is created for demo purposes, but should also serve in the future as a template for other RESTful Webservices.
 
 ## 2. Build and Run
-This WebService was build with the Gradle Build-Tool. \
+This WebService was build with the Gradle Build-Tool.
 ### 2.1. Build project 
 When you have gradle installed on your local machine run:\
 ```$ gradle clean build```\
