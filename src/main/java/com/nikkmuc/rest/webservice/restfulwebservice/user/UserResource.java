@@ -1,6 +1,8 @@
 package com.nikkmuc.rest.webservice.restfulwebservice.user;
 
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.EntityModel;
@@ -18,7 +20,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
 @RestController
 @Tag(name = "User")
-@RequestMapping(path = "/users")
+@RequestMapping(path = "/users", produces = {"application/json","application/xml"})
 public class UserResource {
 
     @Autowired
