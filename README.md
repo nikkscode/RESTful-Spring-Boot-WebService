@@ -66,4 +66,10 @@ This RESTful Webservice consists auf two entities: Users and their Posts
 | Retrieve defails of a post    | GET            | /users/{id}/posts/{post_id} | /users/1/posts/210 |
 
 
-
+### 5.3. Richardson Maturity Level
+| Level   | Description                                                                                                   | State    |
+|---------|---------------------------------------------------------------------------------------------------------------|----------|
+| Level 0 | Expose SOAP web services in REST style                                                                        | *DONE*   |
+| Level 1 | Expose resources with proper URI                                                                              | *DONE*   |
+| Level 2 | Expose resources with proper URI and proper http-Method                                                       | *DONE*   |
+| Level 3 | Expose resources with proper URI and proper http-Method + HATEOAS (data and additional next possible actions) | *DONE*   |
