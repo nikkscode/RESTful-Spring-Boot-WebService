@@ -8,7 +8,7 @@ public class User {
 
     private Integer id;
 
-    @Size(min=2, message="Name should have at least 2 characters")
+    @Size(min=2, max=50, message="Name should have a minimal length of 2 characters and maximal length of 50 characters")
     private String name;
 
     @Past
