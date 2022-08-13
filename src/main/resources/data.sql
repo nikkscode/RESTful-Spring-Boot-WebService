@@ -1,0 +1,11 @@
+insert into user values(100, current_date(), 'Dave');
+insert into user values(200, current_date(), 'Jim');
+insert into user values(300, current_date(), 'Alexandra');
+insert into user values(400, current_date(), 'Lissie');
+insert into user values(500, current_date(), 'Mati');
+insert into user values(600, current_date(), 'Dave');
+insert into user values(700, current_date(), 'Sarah');
+insert into post values(11011, 'My First Post', 100);
+insert into post values(11012, 'My Second Post', 100);
+insert into post values(11013, 'My First Post', 700);
+insert into post values(11014, 'My Second Post', 700);

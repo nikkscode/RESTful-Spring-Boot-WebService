@@ -1,6 +1,7 @@
 package com.nikkmuc.rest.webservice.restfulwebservice.user;
 
 
+import com.nikkmuc.rest.webservice.restfulwebservice.user.entities.User;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
